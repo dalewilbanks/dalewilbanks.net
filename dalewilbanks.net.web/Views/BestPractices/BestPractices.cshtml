@@ -1,0 +1,52 @@
+﻿@{
+    Page.Title = "Best Practices";
+}
+<p>
+ Best practice knowledge across some of the various development disciplines I work in.</p>
+ <a href="/BestPractices/IDesign_CSharp_Coding_Standard_2.32.pdf" target="_blank">C#</a> iDesign.Net, Juval's C# coding standard.  <a href="http://idesign.net" target="_blank">iDesign.Net</a>, the source for most C# best practice guidance.</br>
+ <a>TSQL</a><br />
+ <a href="/BestPractices/Usability">Usability</a><br />
+ <a href="/BestPractices/Methodology">Methodology</a><br />
+ <a href="http://msdn.microsoft.com/en-us/library/ms954638.aspx" target="_blank">Services</a><br />
+ <a href="http://martinfowler.com/bliki/PresentationSmells.html" target="_blank">Presentations</a><br />
+
+ <a>Design</a><br />
+ <a>Favorite Utilities</a><br />
+ <h3>Software Development - Waxing Philosophical</h3>
+ <p><b>The customer is <em>not</em> always right.</b>  You are their partner, and you need to guide them into making the right choice.  Don't spoil them, by saying yes when it's not right. Over time, they can turn into a brat, and that's bad for them and you.</p>
+ <p><b>Give a <a href="http://s3.amazonaws.com/dogonews/pictures/1910/content/whiplashTacowhiplash.jpg?1285696136" class="preview" style="text-decoration:none;">monkey</a> a rope, and he wants to be a cowboy.</b> Be careful when you agree to do a small thing for a demanding person; it can become a very large thing quickly.</p>
+ <p><b>Nine pregnant women can't have a baby in a month.</b> Developing software requires completing predecessors in earlier interations.  No, you can't get it all at once, sorry!</p>
+ <p><b>Don't put a turd in the punchbowl.</b> People remember your mistakes 10x longer than your successes; do your best not to make them.</p>
+ <p><b>Somedays, it's your turn to be in the barrel.</b> Sometimes it 'just ain't your day'; no worries, tomorrow will be a fresh start.</p>
+ <p><b>Under Promise, Over Deliver.</b> Managing expectations is job #1 when working with the customer; manage well and everyone is happy.</p>
+ <p><b>To Thine Ownself be True.</b> Be fair to yoursef.  Outcomes are maximized for everyone when it's Win-Win.</p>
+ <p><b>Focus and Execute.</b> The left and right hands of the mighty developer. Make it happen baby.</p>
+ <p><b>There is no Fate, but what we Make.</b> Just ask Sarah Connor; you make the future, take control.</p>
+ <p><b>Confrontation == Progress.</b> To solve big problems you can't be afraid to confront people and bring them to the light.  You must break some eggs to make your omelette, or else your stuck and nothing happens.
+   Embrace Confrontation!, it is a mighty tool for good.</p>
+<p><b>Do or Do Not, There Is No Try!</b> Heed the instruction of <a href="http://www.youtube.com/watch?v=q3hn6fFTxeo" target="_blank">Master Yoda</a>.</p>
+<p><b>Certain Victory.</b> Rally the troops, knock down all barriers, leave nothing to chance, and assure certain victory.</p>
+<p><b>Low Coupling, High Cohesion.</b> Well designed architecture will strive to minimize coupling between classes, components, services, applications, and so forth, so that changes in one part of the system don't break other parts of the system. 
+High Cohesion simply means to have everything be very good at one, and only one, purpose. (ex. no super classes). Like database normalization, sometimes high coupling is allowed for performance reasons, but it is the exception, and should be done
+only when intentional. Ref:<a href="http://msdn.microsoft.com/en-us/magazine/cc947917.aspx" target="_blank">Patterns and Practices Article: Cohesion And Coupling</a></p>
+<p><b>K.I.S.S.</b> The driving principle of software design, and life in general.  Keep It Simple Stupid.</p>
+
+   <br /><h3>Favorite Quotes (related to Software Development)</h3>
+   <p>Success is a menance. It fools smart people into thinking they can't lose.<b>-Bill Gates</b></p>
+   <p>There are three kinds of people: People who make things happen, people who watch things happen, and people who wonder what happened. To be successful, you need to makes things happen.<b>-James Lovell, Commander of Apollo 13</b></p>
+   <p>There is absolutely no relationship between
+   <ul>
+   <li>the required behavior of the system (<em>Customer World</em> expressed in use cases), </li>
+   <li>and <em>how</em> you are going to implement the solution.(<em>Software World</em> expressed as a working system) </li>
+      </ul>
+   These are 2 different worlds. The Architect straddles the line between these 2 worlds <b>-Juval Lowy</b></p>
+   <p>An architecture is described with properties, contracts, components, etc. - this is the static aspect.</br>
+   How these interact should be described (<em>UML Interaction diagram</em>) - this is the dynamic aspect.</br>
+   Coding is marrying the static and the dynamic together. <b>-Juval Lowy</b></p>
+
+   <p>Don't design against the requirements, they will change.  Instead, design an extensible architecture that can meet the needs of the 3 - 4 <em>core</em> use cases. 
+   All business systems usually have just a few true core use cases. There will be a limited set of building blocks required to satisfy these use cases. The configurability
+   of the system is immaterial, it's the modularity that's important.  The Architect selects the right building blocks, then when the requirements change (as they will) you 
+   do not change the static composition of the system, rather, you change the dynamic interaction.  When done correctly, Workflow basically IS the dynamic interaction.
+      <b>-Juval Lowy (on <a href="http://s3.amazonaws.com/dnr/dotnetrocks_0708_juval_lowy.mp3">DotNetRocks</a>)</b>
+   </p>

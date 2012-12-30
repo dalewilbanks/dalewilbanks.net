@@ -1,0 +1,207 @@
+﻿@{
+	Page.Title = "MVC3/MVCJSON/EntityFramework/datatables.net Demo";
+}
+
+@{ //putting in @@sectionhead is broken on this page for MVC 4 Beta, need to fix, the jscript below should be in head, or maybe a separate .js file (even better)
+   
+}
+
+<script type="text/javascript">
+
+    $.fn.dataTableExt.oApi.fnReloadAjax = function (oSettings, sNewSource, fnCallback, bStandingRedraw) {
+        if (typeof sNewSource != 'undefined' && sNewSource != null) {
+            oSettings.sAjaxSource = sNewSource;
+        }
+        this.oApi._fnProcessingDisplay(oSettings, true);
+        var that = this;
+        var iStart = oSettings._iDisplayStart;
+
+        //dtw // this didn't fix it!
+        //bStandingRedraw = true;
+        //end dtw
+
+        //BUG fix at: http://www.datatables.net/forums/discussion/3703/fnreloadajax-with-fnstandingredraw/p1
+
+        oSettings.fnServerData(oSettings.sAjaxSource, [], function (json) {
+            /* Clear the old information from the table */
+            that.oApi._fnClearTable(oSettings);
+
+            /* Got the data - add it to the table */
+            var aData = (oSettings.sAjaxDataProp !== "") ?
+            that.oApi._fnGetObjectDataFn(oSettings.sAjaxDataProp)(json) : json;
+
+            for (var i = 0; i < aData.length; i++) {
+                that.oApi._fnAddData(oSettings, aData[i]);
+            }
+
+            oSettings.aiDisplay = oSettings.aiDisplayMaster.slice();
+            that.fnDraw();
+
+            if (typeof bStandingRedraw != 'undefined' && bStandingRedraw === true) {
+                oSettings._iDisplayStart = iStart;
+                that.fnDraw(false);
+            }
+
+            that.oApi._fnProcessingDisplay(oSettings, false);
+
+            /* Callback user function - for event handlers etc */
+            if (typeof fnCallback == 'function' && fnCallback != null) {
+                fnCallback(oSettings);
+            }
+        }, oSettings);
+    }
+
+    //jquery plugin for clearing a form
+    $.fn.clearForm = function() {
+  return this.each(function() {
+    var type = this.type, tag = this.tagName.toLowerCase();
+    if (tag == 'form')
+      return $(':input',this).clearForm();
+    if (type == 'text' || type == 'password' || tag == 'textarea')
+      this.value = '';
+    else if (type == 'checkbox' || type == 'radio')
+      this.checked = false;
+    else if (tag == 'select')
+      this.selectedIndex = -1;
+  });
+};
+
+
+$(function () {
+    $("#EntryDate").datepicker();
+});
+
+function showmdAddWorkItem() {
+	$("#mdAddWorkItem").dialog({
+	    height: 410,
+        width: 530,
+        modal: true,
+        show: 'slide',
+        hide: 'slide',
+        
+    });
+
+    $("#workItemForm").clearForm();
+}
+
+$(document).ready(function () {
+    $("#mdAddWorkItem").hide();
+    $("#workItemAddedMessage").hide();
+    databind();
+});
+
+function editWorkItem(workItemId) {
+    alert("Edit Under Contstruction Id=" + workItemId);
+}
+
+
+function addWorkItem() {
+    //note, $.post("WorkItems/333", ...jsondata here..);, should work, but we are getting a 405 (Method Not Allowed) error
+    $.post("Services/WorkItemEFPost", $("#workItemForm").serialize());
+    $("#workItemAddedMessage").show("slow", function () { $("#workItemAddedMessage").fadeOut(3000); });
+    $("#workItemForm").clearForm();
+}
+
+var oTable = null;
+
+function databind() {
+        oTable = $('#tblItems').dataTable({
+            "bProcessing": true,
+            "sAjaxSource": 'Services/WorkItemJSON',
+            "sScrollY": "300px",
+            "bPaginate": false,
+        });
+
+        //why this not working? http://datatables.net/forums/discussion/6650/server-side-auto-refresh-table/p1
+        //http://www.elated.com/articles/javascript-timers-with-settimeout-and-setinterval/
+        setInterval("refresh()", 3000);
+
+    }
+
+    function refresh() 
+    {
+     //got it working. TODO: move the fnReloadAjax plugin to it's own file, AND fix the reload from rescrolling to top of page!
+
+        //oTable.fnDraw(false); //with false, it doesn't scroll to top of table, but does with fnReloadAjax, hmm
+        oTable.fnReloadAjax(); //http://datatables.net/plug-ins/api
+
+        //$("tr").title = "Click to Edit";//doesn't work
+
+    }
+
+ function checkForEnterKey(e)
+{
+   if(e && e.keyCode == 13)
+   {
+      addWorkItem();
+   }
+}
+
+/* this don't work with datatable 
+function editWorkItem(workItemId) {
+    alert("Edit Under Contstruction Id=" + workItemId);
+}*/
+
+</script>
+
+
+
+
+
+
+<p>
+   This is a simple demonstration of <a href="http://www.datatables.net" target="_blank">datatables.net</a> (client side tables bound via AJAX to server) 
+   against a MVC JSON backend, that then persists to EntityFramework SQLServer database. MVCJSON means a Razor page generates the JSON instead of a WCF Service.
+   It's a bit more code, but we can hand tweak the ouput, and it some sense it's simpler, may be faster (TBD).</br>
+   For EntityFramework, I used the code first approach to create the entities, and it works splendidly, very simple.
+      Note that the page never reloads, all updates are handled via AJAX using datatables.net.</p>
+   <p>
+   Click "Add Work Item" to enter an enhancement or bug for this site.  All data is communicated back to the webserver via AJAX/REST, 
+   and the webserver saves it back to SqlServer via EntityFramework.<br />
+
+   BUG Scrollbar won't hold, working on this.......
+   
+</p>
+
+
+<table id="tblItems">
+<thead>
+	<tr><td>WorkItemID</td><td>Name</td><td>Type</td><td>Description</td><td>Entry Date</td><td>Entered By</td></tr>
+</thead>
+<tbody></tbody>
+</table>
+
+
+
+<div style="margin-top:20px">
+<span style="margin-right:30px; vertical-align="center"><input type="button" value="Add Work Items" class="button" onclick="showmdAddWorkItem()"/></span>
+<span style="vertical-align="center"">Display the EntityFramework->MVCJSON datafeed from dalewilbanks.net <a href="Services/WorkItemJSON" target="_blank">Click Here</a></span>
+</div>
+
+<div id="mdAddWorkItem" title="Add Work Item" onKeyPress="return checkForEnterKey(event)">
+<span><em>Form validation under construction...</em></span>
+<form id="workItemForm">
+<fieldset>
+<table id="tblAddWorkItem">
+<tbody>
+<tr><td>Name</td><td><input type="text" id="Name" name="Name"/></td></tr>
+<tr><td>Type</td>
+<td>
+<select name="Type">
+<option value="Bug">Bug</option>
+<option value="Enhancement">Enhancement</option>
+</select>
+</td>
+</tr>
+<tr><td>Description</td><td><textarea rows="4" cols="35" id="Description" name="Description"></textarea></td></tr>
+<tr><td>Entry Date</td><td><input type="text" id="EntryDate" name="EntryDate" maxlength="10" style="width:130px"/></td></tr>
+<tr><td>Entered By</td><td><input type="text" id="EnteredBy" name="EnteredBy"/></td></tr>
+</tbody>
+</table>
+<input type="button" value="Add" class="button" onclick="addWorkItem()"/>
+<input type="button" value="Close" class="button" onclick="$('#mdAddWorkItem').dialog('close');"/>
+<span id="workItemAddedMessage" style="margin-left:20px; color:#505abc">Work Item added...</span>
+</fieldset>
+</form>
+</div>
+

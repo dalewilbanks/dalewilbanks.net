@@ -1,0 +1,21 @@
+
+#1 -DONE: update this web project to be a REAL MVC project with Controllers, Views and Model.  Post back to the Controllers, etc!
+#2 - DRAW UP AN ARCHITECTURE DIAGRAM of what your major assemblies are, and how you are keeping them decoupled!!  Your website
+	should be decoupled from your entities and models really.  If it were a 3rd party consuming site it would be don't you think?
+	What is the interaction diagram for an AJAX client on this site?  Do you ever post back to the site itself, or just to the REST services?
+	If so, why do you need th controllers, wouldn't the old version of the site work just fine?
+	Do this, take the best of both, and put all your views w/o controllers in the Views folder, change MapRoute to find those.  This way,
+	controllers are optional.
+
+#3 - put all services into a separate site, odata.dalewilbanks.net
+- DONE: Get POSTs to be handled by MVC controller, not a Razor page dummy!
+- EF Grid, get rid of scroll going to top
+- EF Grid, reverse sort
+- Add field validation to workitem form
+- Add edit item/ delete item.  Tooltip info at http://www.datatables.net/forums/discussion/5234/how-to-use-tooltip-with-bprocessing-sajaxsource-cause-otable.fngetnodes.length-is-0/p1
+
+
+Completed
+- Clear AddItem form after Add
+- Get default enter on Add Item form to add the item
+- image preview

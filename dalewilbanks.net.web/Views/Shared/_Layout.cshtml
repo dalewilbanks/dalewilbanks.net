@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+@helper SubFolderName()
+{
+    string homeString = "Home";
+    if(Request.Url.Segments.Count() >= 2)
+    { 
+        @Request.Url.Segments[1].ToString(); 
+    }
+    else
+    {
+        @homeString.ToString();   
+    }
+}
+@helper BreadCrumb()
+{
+    <a href="@Request.Url.Scheme://@Request.Url.Authority" style="font-size:1.0em">@Request.Url.Authority</a>
+    var segmentUrl = "";
+    foreach (var segment in Request.Url.Segments)
+    {
+        if (segment == "/") { continue; } var segmentName = segment.Replace("/", ""); segmentUrl += "/" + segmentName;<text>/</text><a href="@segmentUrl" style="font-size:0.75em">@segmentName</a>;
+    }
+}
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>dalewilbanks.net</title>
+        <link href="@Href("~/Content/Site.css")" rel="stylesheet" />
+        <link rel="stylesheet" href="/Scripts/jquery/themes/base/jquery.ui.all.css">
+        <link href="@Href("~/favicon.ico")" rel="shortcut icon" type="image/x-icon" />
+        <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.6.2.min.js"></script> 
+        <script type="text/javascript" src="/Scripts/jquery/jquery.tmpl.min.js"></script>
+        <script type="text/javascript" src="/Scripts/imagepreview/imagepreview.js"></script>
+
+        <!--jQueryUI includes -->
+        <script src="/Scripts/jquery/external/jquery.bgiframe-2.1.2.js"></script>
+    	<script src="/Scripts/jquery/ui/jquery.ui.core.js"></script>
+	    <script src="/Scripts/jquery/ui/jquery.ui.widget.js"></script>
+	    <script src="/Scripts/jquery/ui/jquery.ui.mouse.js"></script>
+	    <script src="/Scripts/jquery/ui/jquery.ui.draggable.js"></script>
+	    <script src="/Scripts/jquery/ui/jquery.ui.position.js"></script>
+	    <script src="/Scripts/jquery/ui/jquery.ui.resizable.js"></script>
+	    <script src="/Scripts/jquery/ui/jquery.ui.dialog.js"></script>
+        <script src="/Scripts/jquery/ui/jquery.ui.datepicker.js"></script>
+
+        <!--datatables include-->
+        <script src="/Scripts/datatables/jquery.dataTables.js"></script>
+
+
+
+        <script>
+        $(document).ready(documentReady);
+
+        function documentReady() 
+        {
+            selectTab();
+            imagePreview();
+        }
+
+        function selectTab() 
+        {
+            var tabClass = "@SubFolderName()"; 
+            $("#" + tabClass).addClass("selected");
+        }
+    </script>
+
+    <!-- optional content page header content here -->
+    @RenderSection("head", required: false)
+
+    </head>
+    <body>
+    
+        <div id="page">
+            <div id="header">
+                <p class="site-title">@BreadCrumb()</p>
+                <ul id="menu">
+                    <li id="Home"><a href="@Href("~/")">Home</a></li>
+                    <!--li id="AWSDemo"><a href="@Href("~/AWSDemo")">AWS Demo</a></li-->
+                    <li id="EntityFrameworkDemo"><a href="@Href("~/EntityFrameworkDemo")">EntityFramework Demo</a></li>
+                    <li id="MVC4Demo"><a href="@Href("~/MVC4Demo")">MVC4 Demo</a></li>
+                    <li id="Proto"><a href="@Href("~/Proto")">Proto</a></li>
+                    <li id="Lambda"><a href="@Href("~/Lambda")">Lambda</a></li>
+                    <li id="Canvas"><a href="@Href("~/Canvas")">Canvas</a></li>
+                    <li id="CSS3Animation"><a href="@Href("~/CSS3Animation")">CSS3 Animation</a></li>
+                    <li id="Links"><a href="@Href("~/Links")">Links</a></li>
+                    <li id="BestPractices"><a href="@Href("~/BestPractices")">Best Practices</a></li>
+                    <li id="About"><a href="@Href("~/About")">About Dale</a></li>
+                </ul>
+            </div>
+            <div id="main">
+                <div id="content">
+                    <h1>@Page.Title</h1>
+                    @RenderBody()
+                </div>
+                <div id="footer">
+                    &copy; @DateTime.Now.Year - dalewilbanks.net
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

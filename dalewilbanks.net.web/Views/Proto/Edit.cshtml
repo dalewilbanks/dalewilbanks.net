@@ -1,0 +1,75 @@
+﻿@model dalewilbanks.net.entities.WorkItem
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>WorkItem</legend>
+
+        @Html.HiddenFor(model => model.WorkItemID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Type)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Type)
+            @Html.ValidationMessageFor(model => model.Type)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Description)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Description)
+            @Html.ValidationMessageFor(model => model.Description)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Attachments)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Attachments)
+            @Html.ValidationMessageFor(model => model.Attachments)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EntryDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EntryDate)
+            @Html.ValidationMessageFor(model => model.EntryDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EnteredBy)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EnteredBy)
+            @Html.ValidationMessageFor(model => model.EnteredBy)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

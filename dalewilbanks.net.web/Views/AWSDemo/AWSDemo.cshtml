@@ -1,0 +1,121 @@
+﻿@{
+	Page.Title = "MVC3/jQuery/AJAX/REST/AmazonWebServices Demo";
+}
+
+@section head
+{	
+<script type="text/javascript">
+
+$(function () {
+    $("#EntryDate").datepicker();
+});
+
+function showmdAddWorkItem() {
+	$("#mdAddWorkItem").dialog({
+	    height: 540,
+        width: 530,
+        modal: true,
+        show: 'slide',
+        hide: 'slide'
+    });
+}
+
+$(document).ready(function () {
+    $("#mdAddWorkItem").hide();
+    $("#workItemAddedMessage").hide();
+    databind();
+});
+
+function editWorkItem(workItemId) {
+    alert("Edit Under Contstruction Id=" + workItemId);
+}
+
+
+function addWorkItem() {
+    //note, $.post("WorkItems/333", ...jsondata here..);, should work, but we are getting a 405 (Method Not Allowed) error
+    $.post("WorkItemAWSPost", $("#workItemForm").serialize());
+    $("#workItemAddedMessage").show("slow", function () { $("#workItemAddedMessage").fadeOut(3000); });
+}
+
+
+function databind() {
+    //TODO: re-write this, so that rebind only occurs when there are data changes.
+    var url = "Services/WorkItemAWS?time=" + Math.random();  //Cache busting required for IE
+    // had a lot of issues using the $.json object, but $.ajax works
+    var jqXHR = $.ajax({ url: url, async: false });
+    //convert the response string to a javascript object
+    var items = eval('(' + jqXHR.responseText + ')');
+    //remove any rows that exist in the table
+    $("#tblItems").find("tr:gt(0)").remove();
+    //bind the table to the items
+    $("#itemTemplate").tmpl(items).appendTo("#tblItems");
+    setTimeout("databind()", 3000);
+}
+ 
+</script>
+
+}
+
+<p>
+   This is a simple demonstration of jQuery templating against a WCF REST backend, that then persists to Amazon Web Services (AWS).   
+   Note that the page never reloads, all updates are handled via AJAX.  The jQueryUI component library is used where appropriate.</p>
+   <p>
+   Click "Add Work Item" to enter an enhancement or bug for this site.  All data is communicated back to the webserver via AJAX/REST, 
+   and the webserver saves it back to a AWS SimpleDb domain.<br />
+   All file attachments are stored in AWS S3 storage.  <em>(under construction)</em>
+</p>
+
+<script id="itemTemplate" type="text/x-jquery-tmpl">
+<tr onclick="editWorkItem(${WorkItemID});" title="Click to edit">
+<td><b>${WorkItemID}</b></td>
+<td>${Name}</td>
+<td>${Type}</td>
+<td>${Description}</td>
+<td>${Attachments}</td>
+<td>${EntryDate}</td>
+<td>${EnteredBy}</td>
+</tr>
+</script>
+
+<table id="tblItems">
+<thead>
+	<tr><td>WorkItemID</td><td>Name</td><td>Type</td><td>Description</td><td>Attachments</td><td>Entry Date</td><td>Entered By</td></tr>
+</thead>
+<tbody></tbody>
+</table>
+
+<div style="margin-top:20px">
+<span style="margin-right:30px; vertical-align="center"><input type="button" value="Add Work Items" class="button" onclick="showmdAddWorkItem()"/></span>
+<span style="margin-right:30px; vertical-align="center"">Display this data stored on AmazonAWS.com <a href="Services/aws/AmazonSimpleDB-2009-04-15-scratchpad/webapp/" target="_blank">Click Here</a></span>
+<span style="vertical-align="center"">Display the JSON datafeed from dalewilbanks.net <a href="Services/WorkItemAWS" target="_blank">Click Here</a></span>
+</div>
+
+<div id="mdAddWorkItem" title="Add Work Item">
+<span><em>Automatic Id generation and form validation under construction...</em></span>
+<form id="workItemForm" action="">
+<fieldset>
+<table id="tblAddWorkItem">
+<tbody>
+<tr><td>WorkItemID</td><td><input type="text" id="workItemID" name="workItemID"/></td></tr>
+<tr><td>Name</td><td><input type="text" id="Name" name="Name"/></td></tr>
+<tr><td>Type</td>
+<td>
+<select name="Type">
+<option value="Bug">Bug</option>
+<option value="Enhancement">Enhancement</option>
+</select>
+</td>
+</tr>
+<tr><td>Description</td><td><textarea rows="4" cols="35" id="Description" name="Description"></textarea></td></tr>
+<tr><td>Attachments</td><td><input type="text" id="Attachments" name="Attachments"/></td></tr>
+<tr><td>Entry Date</td><td><input type="text" id="EntryDate" name="EntryDate" maxlength="10" style="width:130px"/></td></tr>
+<tr><td>Entered By</td><td><input type="text" id="EnteredBy" name="EnteredBy"/></td></tr>
+</tbody>
+</table>
+<input type="button" value="Add" class="button" onclick="addWorkItem()"/>
+<input type="button" value="Close" class="button" onclick="$('#mdAddWorkItem').dialog('close');"/>
+<span id="workItemAddedMessage" style="margin-left:20px; color:#505abc">Work Item added...</span>
+</fieldset>
+</form>
+</div>
+

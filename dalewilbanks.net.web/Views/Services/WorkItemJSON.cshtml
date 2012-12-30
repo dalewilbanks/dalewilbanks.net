@@ -1,0 +1,37 @@
+﻿@{
+    //note that this page is creating an array of arrays, not an array of objects.  There are no property names in the JSON, it is 
+    // twice as fast as the default WCF DataServices approach.  There is probably a way to do this with WCF DataServices I"m sure
+    // just haven't learned it yet.  That's next.
+    Layout = null;  //MVC will render just this page, no layout page used
+}
+
+@using dalewilbanks.net.entities;
+
+{ "aaData": [ 
+@{
+    var workItemsContext = new WorkItemContext();
+    bool needToPrependACommaa = false;
+    
+    //reverse sort my itesm by WorkItemID, however, the clientside datatables is resorting it, so buggy there.
+    //still, it's nice to show a simple LINQ query
+    var reversedItems = from wi in workItemsContext.WorkItems
+                        orderby wi.WorkItemID descending
+                        select wi;
+
+    //nice and clean json by using razor's <text> tag.  This creates array of arrays, which has no field names, 
+    //so less to transmit to the client, should be faster
+    foreach (var wi in reversedItems) 
+    {
+        if (needToPrependACommaa) 
+        {
+            @:,
+        }
+        else { needToPrependACommaa = true; }
+        
+       <text>[@wi.WorkItemID, "@wi.Name", "@wi.Type", "@wi.Description", "@wi.EntryDate", "@wi.EnteredBy"]</text> 
+    }
+}
+],
+"aaSorting": [[0,"desc"]]
+}
+

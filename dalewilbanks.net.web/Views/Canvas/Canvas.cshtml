@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "Canvas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<script type="text/javascript">
+    var canvas;
+    var context;
+    
+    function init() {
+        canvas = $("#myCanvas")[0];
+        context = canvas.getContext("2d");
+    }
+
+    function drawLine() {
+        //alert($("#intro")[0].innerText);
+        //alert("yo adrian");
+        //this doesn't work//var canvas = $("#myCanvas");
+        //this works//var canvas = document.getElementById("myCanvas");
+        //now this works.  You have to know that jQuery doesn't return the same type of object as getElementById (jQuery returns a jQuery object, getElementById returns HTML DOM).  
+        //ref: http://stackoverflow.com/questions/4069982/document-getelementbyid-vs-jquery
+        context.moveTo(100, 100);
+        context.lineTo(100, 250);
+        context.lineWidth = 10;
+        context.strokeStyle = "#000FFF";
+        context.lineCap = "round";
+        context.stroke();
+    }
+
+    function drawMandelBrot()
+    {
+        var z = 2, c = 0;
+        for (var k = 0; k < 20; k++) {
+
+            z = Math.pow(z,2) + c;
+
+        }
+    
+
+    }
+
+    $(document).ready(function() { init(); drawLine(); drawMandelBrot()} );
+
+</script>
+
+<!--script>
+window.onload = function(){
+    var canvas = document.getElementById("myCanvas");
+    var context = canvas.getContext("2d");
+ 
+    context.moveTo(100, 150);
+    context.lineTo(450, 50);
+    context.stroke();
+};
+
+</script-->
+
+
+
+
+<h2>@ViewBag.Title</h2>
+
+<div id="intro">
+This a training page for using the HTML5 Canvas tag.</br>
+Drawing a canvas Mandlebrot set.  Left click to zoom in, Right click to zoom out.
+</div>
+
+<div>
+<canvas id="myCanvas" height="600" width="800" style="border:1px solid #c3c3c3;" />
+</div>
+
+<div>
+This text comes after the canvas tag.
+</div>
+

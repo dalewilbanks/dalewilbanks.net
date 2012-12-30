@@ -1,0 +1,62 @@
+﻿@{
+    Page.Title = "Usability Commandments";  
+}
+<script>$("#BestPractices").addClass("selected");</script>
+Author: Dale Wilbanks
+<div>
+
+<p>Application Design (aka Usability) is the key to the users heart.  If the application makes them happy, they like it.  To make the user happy, make everything easy.   That’s the whole point of a system, to make things easier for people. (and some other stuff, but you get the picture).
+</p>
+<ol>
+<li>
+Read the book <a href="http://www.amazon.com/Dont-Make-Me-Think-Usability/dp/0321344758" target="_blank">"DON'T MAKE ME THINK"</a> by Steve Krug.  Then memorize it.  Then buy copies for everybody you know for their birthday. Then read it again.
+</li>
+<li>
+Minimize the amount of thought required by the user, make everything obvious.
+</li>
+<li>
+Don’t show the user anything they don’t need to see
+</li>
+<li>
+Don’t provide choices to the user they don’t need to make
+</li>
+<li>
+On a task page, only show the task, and nothing else, no exterior navigation. Force the user to choose Ok or Cancel.  Ok saves, Cancel discards, either one returns you to the previous page.
+</li>
+<li>
+On a page with 5 or less choices, use radio options instead of dropdown so the user doesn’t have to click drop down.  This provides more text as well so the choices can be better defined.
+</li>
+<li>
+Assume the user knows next to nothing.
+</li>
+<li>
+Never put data on a button.  Buttons are for actions only.  For example, if it’s “Choice1” “Choice2” or “Choice3”, don’t provide  3 buttons.  Provide 3 radio options and a button.  This allows the user to confirm their selection before clicking the button.
+</li>
+<li>
+The user doesn’t care if you wrote the system in C#, COBOL, Java, F#, etc.  The technology DOES NOT MATTER, only the user experience does.   Do people care what coding language iTunes is written in?  No, of course not.  Focus solely on the user experience, then let that lead the way for other choices.
+</li>
+<li>
+Want to design a good page?   Think of it first as the user, and how the user want’s to to so something.  WYSIWIG is ideal when possible.   Get that right first, THEN figure out how to build it (or let someone else figure that out).
+</li>
+<li>
+Items that are not viewable/available to the user because of Authorization, should not be displayed at all for security reasons.
+</li>
+<li>
+Items that are not ‘enabled’ due to business logic, should always be displayed, but displayed as disabled. 
+</li>
+<li>
+Always show items that exist.  For example, if you have a folder with no child items, still show it in the file picker, because the user would wonder 
+where the folder went.
+</li>
+<li>
+All True/False choices should be displayed as “Yes/No” instead.
+</li>
+<li>
+Do usability testing for the most frequently used parts of the system.  Usability testing is easy to do, and finds many defects, see DON'T MAKE ME THINK for guidance.
+</li>
+</ol>
+<p>
+Take a look at "The Principles of Design" by Aza Raskin.
+</p>
+
+</div>

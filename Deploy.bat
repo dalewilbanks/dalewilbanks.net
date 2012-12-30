@@ -1,0 +1,1 @@
+ROBOCOPY.EXE  C:\Projects\dalewilbanks.net\dalewilbanks.net.web C:\inetpub\wwwroot\ /MIR
