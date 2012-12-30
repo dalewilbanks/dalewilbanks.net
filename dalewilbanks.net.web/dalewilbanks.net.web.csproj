@@ -314,7 +314,7 @@
     <Content Include="Views\ContentPage.cshtml">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="Views\CSS3.cshtml" />
+    <Content Include="Views\CSS3\CSS3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\dalewilbanks.net.entities\dalewilbanks.net.entities.csproj">
