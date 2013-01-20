@@ -12,6 +12,8 @@ namespace dalewilbanks.net.web.Controllers
         {
             ViewBag.Message = "Index: You are on the About page";
 
+            ViewBag.Content = dalewilbanks.net.wordpress.WordPressReader.Read("http://dalewilbanks.wordpress.com/feed/", "About Dale");
+
             return View("About");
         }
 

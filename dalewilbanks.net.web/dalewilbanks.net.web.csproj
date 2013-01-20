@@ -296,6 +296,10 @@
       <Project>{CB2B3CBA-7EEF-49F6-B118-3CCCEDCDC6BE}</Project>
       <Name>dalewilbanks.net.factories</Name>
     </ProjectReference>
+    <ProjectReference Include="..\dalewilbanks.net.wordpress\dalewilbanks.net.wordpress.csproj">
+      <Project>{783dd9a2-1a32-449d-9331-8201e23b5a56}</Project>
+      <Name>dalewilbanks.net.wordpress</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
