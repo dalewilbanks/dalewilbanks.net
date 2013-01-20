@@ -7,12 +7,24 @@ using System.Xml.Linq;
 
 namespace dalewilbanks.net.wordpress
 {
-    public static class WordPressReader
+    public class WordPressReader
     {
-        public static string Read(string feedUrl, string title)
+        private string _feedUrl;
+        public string FeedUrl
+        {
+            get { return _feedUrl; }
+            set { _feedUrl = value; }
+        }
+
+        public WordPressReader(string feedUrl)
+        {
+            this._feedUrl = feedUrl;
+        }
+
+        public string Read(string title)
         {
             //XDocument rssFeed = XDocument.Load(@"C:\websites\www.standrewsumc.com\RSS2.xml");
-            XDocument rssFeed = XDocument.Load(feedUrl);
+            XDocument rssFeed = XDocument.Load(_feedUrl);
 
             //query the items (rss articlaes) that have a title = Happenings
             var items = rssFeed.Descendants("item").Where(s => s.Descendants("title").First().Value.Equals(title));
