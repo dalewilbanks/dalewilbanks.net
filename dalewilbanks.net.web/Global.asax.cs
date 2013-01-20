@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using System.Web.Http;
+
 
 namespace dalewilbanks.net
 {
@@ -22,11 +22,11 @@ namespace dalewilbanks.net
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapHttpRoute(
+           /* routes.MapHttpRoute(
                  name: "DefaultApi",
                  routeTemplate: "api/{controller}/{id}",
                  defaults: new { id = RouteParameter.Optional }
-             );
+             );*/
 
 
             routes.MapRoute(

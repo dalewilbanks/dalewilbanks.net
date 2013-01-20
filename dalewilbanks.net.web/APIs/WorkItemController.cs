@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Web.Http;
 using dalewilbanks.net.entities;
 
 namespace dalewilbanks.net.web.APIs.Controllers
 {
-    public class WorkItemController : ApiController
+    /*public class WorkItemController : ApiController
     {
 
         WorkItemContext workItemContext = new WorkItemContext();
@@ -56,6 +55,7 @@ namespace dalewilbanks.net.web.APIs.Controllers
         //{
         //}
         #endregion
+        
 
-    }
+    }*/
 }
