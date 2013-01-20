@@ -10,7 +10,7 @@ namespace dalewilbanks.net.web.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Home Page";
+            ViewBag.Content = dalewilbanks.net.wordpress.WordPressReader.Read("http://dalewilbanks.wordpress.com/feed/", "Home");
 
             return View("Home");
         }
