@@ -13,9 +13,10 @@ namespace dalewilbanks.net.web.Controllers
 
         public ActionResult Index()
         {
+            string viewName = "Links";
             ViewBag.Title = "Technology Links - some of the resources I find amazingly helpful";
-            ViewBag.Content = _wpReader.Read("Technology Links"); //necessary, the - is messaing up the LINQ match on title.
-            return View("Links");
+            ViewBag.Content = _wpReader.Read(viewName);
+            return View(viewName);
         }
 
     }

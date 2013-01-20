@@ -13,31 +13,35 @@ namespace dalewilbanks.net.web.Controllers
 
         public ActionResult Index()
         {
+            string viewName = "BestPractices";
             ViewBag.Title = "Best Practices";
-            ViewBag.Content = _wpReader.Read(ViewBag.Title);
-            return View("BestPractices");
+            ViewBag.Content = _wpReader.Read(viewName);
+            return View(viewName);
         }
 
         public ActionResult Methodology()
         {
-            ViewBag.Title = "Methodology";
-            ViewBag.Content = _wpReader.Read(ViewBag.Title);
-            return View("Methodology");
+            string viewName = "Methodology";
+            ViewBag.Title = viewName;
+            ViewBag.Content = _wpReader.Read(viewName);
+            return View(viewName);
         }
 
         public ActionResult Usability()
         {
+            string viewName = "Usability";
             ViewBag.Title = "Usability Commandments";
-            ViewBag.Content = _wpReader.Read(ViewBag.Title);
-            return View("Usability");
+            ViewBag.Content = _wpReader.Read(viewName);
+            return View(viewName);
         }
 
 
         public ActionResult DesignPatterns()
         {
+            string viewName = "DesignPatterns";
             ViewBag.Title = "Design Patterns";
-            ViewBag.Content = _wpReader.Read(ViewBag.Title);
-            return View("DesignPatterns");
+            ViewBag.Content = _wpReader.Read(viewName);
+            return View(viewName);
         }
 
     }

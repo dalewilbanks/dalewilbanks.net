@@ -13,9 +13,10 @@ namespace dalewilbanks.net.web.Controllers
 
         public ActionResult Index()
         {
+            string viewName = "Home";
             ViewBag.Title = "Welcome to dalewilbanks.net";
-            ViewBag.Content = _wpReader.Read(ViewBag.Title);
-            return View("Home");
+            ViewBag.Content = _wpReader.Read(viewName);
+            return View(viewName);
         }
 
     }
