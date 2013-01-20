@@ -2,8 +2,13 @@
     Page.Title = "Welcome to dalewilbanks.net";
 }
 <p> 
-
-    <H3>03/12/2012 - REST post to IDesign Alumni</H3>
+    <H3>01/20/2013 - dalewilbanks.net hosted on Azure</H3>
+    <p>This site is now hosted on Azure websites, with source stored in GitHub.  Continuous builds are setup, so that every push to GitHub rebuilds the site within minutes.
+     Azure WebSite hosting is awesome, this site should only cost $9.36/month, and the services available and performance is excellent.
+      Content is being served up from <a href="http://dalewilbanks.wordpress.com" target="_blank">dalewilbanks.wordpress.com</a> via RSS feed, currently in place for the About page, but will be putting in place for all content pages shortly.</p>
+    <p>Using WordPress to provide HTML Editor for the content, content management, and RSS feed.</p>
+    
+        <H3>03/12/2012 - REST post to IDesign Alumni</H3>
     <p>I've designed proper message based SOAs in the past, and a good asynchronous Request/Response pattern, to me, is the 'nervous system' of a good SOA.   From my perspective, REST (Odata, Web API, etc.) can implement those same solid SOA patterns.  REST just makes it way too easy to fall into the old 'CRUD your entity' style paradigm, and doesn't enforce best practice.  It's as Juval says, there are many possible solutions, but for the master, just a few.</p>
     <p>The ubiquity of HTTP, and the fact that any client can consume/produce REST is a strong predictor of it's success.  I for one, am quite excited about the possibilities.  I think the best practices of SOA can be applied to REST; it's just like anything, you can write a bad SQL query, but that doesn't make SQL a bad approach to accessing databases.  REST does make everything seem like a CRUD operation, but at the atomic level, perhaps everything is.  If we want to use a request message, then we Create one via REST, rather than using a WSDL proxy.  It's still the same message when consumed in C# (hopefully, still have to prove this out).  If we view clients/services as passing messages between each other, then it seems they can be passed via REST, or via an RPC approach.  REST is just simpler, and KISS generally wins at the end of the day.</p>
     <p>I've much to learn about this new era of Web APIs, probably even more to learn about proper SOAs,  and it's an exciting time to be in the middle of it.</p>
