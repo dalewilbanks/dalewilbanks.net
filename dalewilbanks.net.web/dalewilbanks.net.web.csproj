@@ -130,6 +130,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\BackGround.jpg" />
+    <Content Include="Content\images\DWilbanks.jpg" />
+    <Content Include="Content\images\WilbanksServer.JPG" />
     <Content Include="Content\mvc4Site.css" />
     <Content Include="Content\OriginalBackGround.jpg" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
