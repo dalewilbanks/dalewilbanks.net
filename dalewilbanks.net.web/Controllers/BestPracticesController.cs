@@ -10,7 +10,7 @@ namespace dalewilbanks.net.web.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Welcome to ASP.NET MVC!";
+            ViewBag.Content = dalewilbanks.net.wordpress.WordPressReader.Read("http://dalewilbanks.wordpress.com/feed/", "Best Practices");
 
             return View("BestPractices");
         }
