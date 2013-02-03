@@ -114,6 +114,7 @@
     <Compile Include="Controllers\AWSDemoController.cs" />
     <Compile Include="Controllers\BestPracticesController.cs" />
     <Compile Include="Controllers\CanvasController.cs" />
+    <Compile Include="Controllers\CSS3.cs" />
     <Compile Include="Controllers\CSS3AnimationController.cs" />
     <Compile Include="Controllers\EntityFramworkDemoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
