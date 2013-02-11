@@ -3,7 +3,35 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<style>
+    ol > li
+    {
+        font-size: 1.1em;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    ul > li
+    {
+        font-size: 1.0em;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+</style>
 <h2>CSS3 in Seven Simple Steps for .Net Junkies</h2>
+<p>CSS is a different animal than most coding.  There are no logical 'entities', there are no compiler or runtime errors.  There are no common methodologies (ex. functional decomposition, or database normalization).
+Developers tend to tweak CSS directives until they get something that 'mostly works'. 
+    </p>
+<p>
+    The purppose of this presentation is to propose a simple methodology to CSS that would work for a typical .Net developer.  The goal is to 
+    <ul>
+        <li>Create an engaging style for the site</li>
+        <li>Follow best practice CSS</li>
+        <li>Create your CSS quickly with minimal effort</li>
+    </ul>
+     These 7 steps are based on lessons learned developing CSS3 for <a href="https://worldbankhive.logicaladvantage.com" target="_blank">World Bank Hive</a>.
+</p>
 
 <ol>
     <li>
@@ -20,6 +48,7 @@
     <li>
         Prototype Your Layout
         <ul>
+            <li>Use file:// for easy saves</li>
             <li>Define each area as a DIV</li>
             <li>Fill eachc DIV with test content</li>
             <li>Set Margins and Padding</li>
@@ -37,27 +66,29 @@
         </ul>
     </li>
 
-    <li> 
-        Determine Graphics and Color Schemes
-        <ul>
-            <li>Colors</li>
-            <li>Graphics</li>
-            <li>Background</li>
-            <li>Alpha Transparency</li>
-        </ul>
-    </li>
-
-      <li> 
+     <li> 
         Create maintainable CSS files
         <ul>
             <li>SiteStyles.css - defines styles for site wide elements</li>
             <li>PageLayout.css - defines css specific to the page</li>
         </ul>
     </li>  
+
+    <li> 
+        Determine Graphics and Color Schemes
+        <ul>
+            <li>Colors - defined at the top</li>
+            <li>Graphics - stored relative to your .css file</li>
+            <li>Background</li>
+            <li>Alpha Transparency</li>
+        </ul>
+    </li>
+
     <li>
          Code Element Effects
         <ul>
-            <li>Define comment elements: H1, H2, H3, HR</li>
+            <li>Define comment elements: H1, H2, H3, HR, BUTTON</li>
+            <li>Define common  classes: .panel, other??</li>
             <li>Rounded Corners - on buttons, divs</li>
             <li>Shadows - on buttons, divs, hyperlinks</li>
         </ul>
