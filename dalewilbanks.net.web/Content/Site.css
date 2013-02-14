@@ -37,6 +37,20 @@ a:active {
 }
 
 ol li{ margin-top: 7px; }
+
+ol > li
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+ul > li
+{
+    font-size: 1.0em;
+    font-weight: 500;
+    cursor: pointer;
+}
 /* HEADINGS   
 ----------------------------------------------------------*/
 h1, h2, h3, h4, h5, h6 {
@@ -344,3 +358,8 @@ input[type="text"].error-field, input[type="password"].error-field {
     .validation-error:before {
         content: "»";
     }
+
+li.css3
+{
+    list-style-image: url('/images/CSS3_Small.png');
+}

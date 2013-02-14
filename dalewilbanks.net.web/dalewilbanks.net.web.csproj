@@ -163,6 +163,8 @@
     <Content Include="Content\themes\base\jquery.ui.tabs.css" />
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
     <Content Include="Global.asax" />
+    <Content Include="Images\CSS3_med.png" />
+    <Content Include="Images\CSS3_small.png" />
     <Content Include="Scripts\datatables\jquery.dataTables.js" />
     <Content Include="Scripts\imagepreview\imagepreview.js" />
     <Content Include="Scripts\jquery-1.6.2-vsdoc.js" />
