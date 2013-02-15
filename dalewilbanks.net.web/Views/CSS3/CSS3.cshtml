@@ -1,7 +1,12 @@
 ﻿@{
     ViewBag.Title = "CSS3";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    
    
+}
+@helper externalLink(string url)
+{
+    <a target="_blank" href="@url"><img src="/Content/images/externalLink.png"/></a>
 }
 
 <h2>CSS3 in Seven Simple Steps for .Net Junkies</h2>
@@ -33,7 +38,7 @@ Winning Web apps look good, so it's important to be good with CSS.
             <li>CSS Box Model</li>
             <li>CSS Selectors</li>
             <li>Reset CSS</li>
-            <li>Selectors</li>
+            <li>Selectors @externalLink("http://www.w3schools.com/cssref/css_selectors.asp")</li>
         </ul>
     </li>
 
@@ -54,6 +59,10 @@ Winning Web apps look good, so it's important to be good with CSS.
         Know your Tools
         <ul>
             <li>Chrome Developer Tools</li>
+                <ul>
+                    <li>Inspect elemement</li>
+                    <li>:hover - Force Element State</li>
+                </ul>
             <li>Visual Studio 2012</li>
             <li>Blend for Visual Studio</li>
         </ul>
@@ -72,7 +81,7 @@ Winning Web apps look good, so it's important to be good with CSS.
         <ul>
             <li>Colors - defined at the top</li>
             <li>Graphics - stored relative to your .css file.  Use .png where possible</li>
-            <li>Background - graphics, or gradient</li>
+            <li class="css3">Background - graphics, or gradient</li>
             <li class="css3">Opacity</li>
             <li class="css3">RGBA - Alpha Transparency</li>
         </ul>
