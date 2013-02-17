@@ -292,6 +292,8 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="Views\CSS3\CSS3.cshtml" />
+    <Content Include="Views\CSS3\CSSConcepts.cshtml" />
+    <Content Include="Views\Shared\_externalLink.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\dalewilbanks.net.entities\dalewilbanks.net.entities.csproj">
