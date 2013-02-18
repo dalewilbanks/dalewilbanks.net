@@ -294,6 +294,12 @@
     <Content Include="Views\CSS3\CSS3.cshtml" />
     <Content Include="Views\CSS3\CSSConcepts.cshtml" />
     <Content Include="Views\Shared\_externalLink.cshtml" />
+    <Content Include="Views\CSS3\PrototypeLayout.cshtml" />
+    <Content Include="Views\CSS3\KnowYourTools.cshtml" />
+    <Content Include="Views\CSS3\Copy %283%29 of CSSConcepts.cshtml" />
+    <Content Include="Views\CSS3\Copy %284%29 of CSSConcepts.cshtml" />
+    <Content Include="Views\CSS3\Copy %285%29 of CSSConcepts.cshtml" />
+    <Content Include="Views\CSS3\Copy %286%29 of CSSConcepts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\dalewilbanks.net.entities\dalewilbanks.net.entities.csproj">
