@@ -11,8 +11,6 @@ body
     padding: 0;
     color: #000;
     background-image: url('BackGround.jpg');
-    background-color: #34265B;
-    background-repeat: no-repeat;
 
     /*background:
     -webkit-radial-gradient(black 15%, transparent 16%) 0 0,
