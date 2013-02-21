@@ -23,7 +23,7 @@ namespace dalewilbanks.net.wordpress
 
         public string Read(string title)
         {
-            string content = string.Empty;
+            string content = "<a target=\"_blank\" href=\"http://dalewilbanks.wordpress.com\"><img  id=\"editIcon\" src=\"/Content/images/editIcon.png\"/></a>";
             try
             {
                 //XDocument rssFeed = XDocument.Load(@"C:\websites\www.standrewsumc.com\RSS2.xml");
@@ -41,13 +41,13 @@ namespace dalewilbanks.net.wordpress
                 var contentNode = item.Descendants(ns + "encoded").First();
 
                 //remove unwanted links that wordpress includes.  Can't use nodes because it's all CDATA, and can't load it into an XDocument because there are bad chars, so working with it as text.
-                content = contentNode.Value.Substring(0, contentNode.Value.IndexOf("<a rel"));
+                content += contentNode.Value.Substring(0, contentNode.Value.IndexOf("<a rel"));
 
                 //if you write content, it writes the enclosing tags also, so write out content.Value
             }
             catch
             {
-                content = "Error connecting to WordPress.";
+                content += "Error connecting to WordPress.";
             }
             return content;
         }

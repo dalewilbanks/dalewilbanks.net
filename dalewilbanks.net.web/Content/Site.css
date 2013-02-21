@@ -368,4 +368,12 @@ li.css3
     list-style-image: url('/images/CSS3_Small.png');
 }
 
+#editIcon
+{
+    display: block;
+    float: right;
+    position: relative;
+    top: -2.5em;
+    left: .75em;
+}
 
