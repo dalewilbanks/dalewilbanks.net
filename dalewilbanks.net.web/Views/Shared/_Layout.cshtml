@@ -4,13 +4,16 @@
     string homeString = "Home";
     if(Request.Url.Segments.Count() >= 2)
     { 
-        @Request.Url.Segments[1].ToString(); 
+        homeString = Request.Url.Segments[1].ToString(); 
     }
     else
     {
-        @homeString.ToString();   
+        homeString = homeString.ToString();   
     }
+    homeString = homeString.Replace("/", String.Empty);
+    @homeString;
 }
+
 @helper BreadCrumb()
 {
     <a href="@Request.Url.Scheme://@Request.Url.Authority" style="font-size:1.0em">@Request.Url.Authority</a>
