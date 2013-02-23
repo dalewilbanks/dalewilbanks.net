@@ -2,13 +2,25 @@
     ViewBag.Title = "1-CSSConcepts";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<style>
+    ul > li
+    {
+        margin-bottom: 1em;
+    }
+</style>
 
-<h2>CSSConcepts</h2>
+<h2>CSS Concepts</h2>
  <ul>
-    <li>Cascading inheritance</li>
-    <li>CSS Box Model</li>
-    <li>CSS Selectors</li>
-    <li>Reset CSS</li>
-    <li>Selectors @Html.Partial("_externalLink", "http://www.w3schools.com/cssref/css_selectors.asp")</li>
+    <li>Cascading Inheritance - Styles defined at the parent level cascade to child elements.</li>
+
+
+    <li>Reset CSS - Browsers provide a default set of styles, which you can 'reset' using a Reset.css</li>
+
+    <li>CSS Box Model  - The edges of elements on the page are defined by a box.</li>
+
+
+    <li>CSS Selectors @Html.Partial("_externalLink", "http://www.w3schools.com/cssref/css_selectors.asp")</li>
+
+
 </ul>
 
