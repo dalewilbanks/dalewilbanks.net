@@ -2,17 +2,20 @@
 Cascading Inheritance - Styles defined at the parent level cascade to child elements.
  Demo this using Chrome tools to turn off fonts at body level, then turn them on on an li element.
 
-Reset CSS -  Browsers provide a default set of styles, which you can 'reset' using a Reset.css
-        We are cascading from body down, but there is an even higher level from the browser.
-        Discuss the concept that every browser provides default CSS
-		Users can even define their own default CSS using a User Stylesheet.
-		Uncomment the strong tag to apply defined strong font.
+We are cascading from body down, but there is an even higher level from the browser.
+
+ Browsers provide a default set of styles, but that can vary from one browser to another, or from one user to another.
+ Users can even define their own default CSS using a User Stylesheet.  Show user agent stylesheet in Chrome Dev Tools
+ Reset CSS -  Browsers provide a default set of styles, which you can 'reset' using a Reset.css
+ Uncomment the Reset CSS to show how it removes all style definition.
+ Uncomment all our element styles to show our element style definitions. 
 
 CSS Box Model - The edges of elements on the page are defined by a box.
 	    Change the Reset.css to cause every element to be box bordered.
 
 CSS Selectors  -  review the basic ones on WC3Schools
 Styles apply from least specific match to most specific. (ex. element overrides *, #id overrides .class)
+Edit CSS, give * { background-color: red} and give h1{background-color: blue}
 
 
 2- Prototype Your Layout
