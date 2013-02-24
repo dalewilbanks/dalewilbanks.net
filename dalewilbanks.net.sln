@@ -29,26 +29,24 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dalewilbanks.net.web", "dal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dalewilbanks.net.wordpress", "dalewilbanks.net.wordpress\dalewilbanks.net.wordpress.csproj", "{783DD9A2-1A32-449D-9331-8201E23B5A56}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CSS3Demo", "http://localhost:1181", "{A8089C10-5A57-4F7F-B832-199FC52475FF}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CSS3", "CSS3\", "{3BFE4097-E2B3-4ABA-BAB4-61CDFBE53C7D}"
 	ProjectSection(WebsiteProperties) = preProject
-		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_1181"
-		Debug.AspNetCompiler.PhysicalPath = "CSS3Demo\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1181\"
+		Debug.AspNetCompiler.VirtualPath = "/CSS3"
+		Debug.AspNetCompiler.PhysicalPath = "CSS3\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\CSS3\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_1181"
-		Release.AspNetCompiler.PhysicalPath = "CSS3Demo\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1181\"
+		Release.AspNetCompiler.VirtualPath = "/CSS3"
+		Release.AspNetCompiler.PhysicalPath = "CSS3\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\CSS3\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "CSS3Demo\"
-		DefaultWebSiteLanguage = "Visual C#"
+		VWDPort = "10325"
 	EndProjectSection
 EndProject
 Global
@@ -168,16 +166,16 @@ Global
 		{783DD9A2-1A32-449D-9331-8201E23B5A56}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{783DD9A2-1A32-449D-9331-8201E23B5A56}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{783DD9A2-1A32-449D-9331-8201E23B5A56}.Release|x86.ActiveCfg = Release|Any CPU
-		{A8089C10-5A57-4F7F-B832-199FC52475FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A8089C10-5A57-4F7F-B832-199FC52475FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A8089C10-5A57-4F7F-B832-199FC52475FF}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{A8089C10-5A57-4F7F-B832-199FC52475FF}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{A8089C10-5A57-4F7F-B832-199FC52475FF}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{A8089C10-5A57-4F7F-B832-199FC52475FF}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{A8089C10-5A57-4F7F-B832-199FC52475FF}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{A8089C10-5A57-4F7F-B832-199FC52475FF}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{A8089C10-5A57-4F7F-B832-199FC52475FF}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
-		{A8089C10-5A57-4F7F-B832-199FC52475FF}.Release|x86.ActiveCfg = Debug|Any CPU
+		{3BFE4097-E2B3-4ABA-BAB4-61CDFBE53C7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BFE4097-E2B3-4ABA-BAB4-61CDFBE53C7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BFE4097-E2B3-4ABA-BAB4-61CDFBE53C7D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3BFE4097-E2B3-4ABA-BAB4-61CDFBE53C7D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3BFE4097-E2B3-4ABA-BAB4-61CDFBE53C7D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3BFE4097-E2B3-4ABA-BAB4-61CDFBE53C7D}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BFE4097-E2B3-4ABA-BAB4-61CDFBE53C7D}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{3BFE4097-E2B3-4ABA-BAB4-61CDFBE53C7D}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3BFE4097-E2B3-4ABA-BAB4-61CDFBE53C7D}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3BFE4097-E2B3-4ABA-BAB4-61CDFBE53C7D}.Release|x86.ActiveCfg = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
