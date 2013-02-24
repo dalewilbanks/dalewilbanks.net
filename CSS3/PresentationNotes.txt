@@ -19,11 +19,23 @@ Edit CSS, give * { background-color: red} and give h1{background-color: blue}
 
 
 2- Prototype Your Layout
-
 Mock up a prototype layout: Whiteboard, Paper, or PowerPoint
-Use file:// for easy saves
+	Show what we did for World bank
+
+Create HTML mockup, Use file:// for easy saves
+
 Define each area as a DIV
+  Nesting of DIVs is crucial to proper layout.
+
+
 Fill each DIV with test content
+
+Define the style of the ul.navigation li
+
 Set Margins and Padding
+
+
 Resize and confirm wrapping behavior
+
+
 Test in each target browser

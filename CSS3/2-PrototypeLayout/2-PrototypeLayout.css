@@ -42,7 +42,7 @@ h3
 /*#endregion*/
 
 
-div
+div, li
 {
    
     border-style:solid;
@@ -51,4 +51,16 @@ div
     
 }
 
+
+ul.navigation li
+{
+    display: table-cell;
+    list-style: none;
+    width: 15%;
+    vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
+    padding-left: 1em;
+    padding-right: 1em;
+}
 
