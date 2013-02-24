@@ -32,10 +32,10 @@ Fill each DIV with test content
 
 Define the style of the ul.navigation li
 
+Define container class, define column class
+
 Set Margins and Padding
 
-
 Resize and confirm wrapping behavior
-
 
 Test in each target browser
