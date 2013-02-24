@@ -1,7 +1,7 @@
 ﻿@import url("../Content/Reset.css");
 
 
-/*#region Element Styling */
+/*#region  Base Element Styling */
 
 body {
     font-family: Lucidia Console, Lucida Sans Unicode, Verdana, Helvetica, Sans-Serif;
@@ -63,4 +63,37 @@ ul.navigation li
     padding-left: 1em;
     padding-right: 1em;
 }
+
+
+.container
+{
+    white-space: nowrap;
+    vertical-align: top;
+    padding: 5px;
+    min-height: 640px;
+    overflow: auto;
+}
+.column
+{
+    display: inline-block;
+    white-space: normal;
+    vertical-align: top;
+}
+
+#filter
+{
+    width: 20%;
+}
+
+#ideaMap
+{
+    width: 50%;
+}
+
+#resource
+{
+    width: 25%;
+}
+
+
 
