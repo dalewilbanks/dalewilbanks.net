@@ -50,5 +50,10 @@ namespace dalewilbanks.net.web.Controllers
         {
             return View("7-AdvancedCSS3Effects/AdvancedCSS3Effects");
         }
+
+        public ActionResult More()
+        {
+            return View("More");
+        }
     }
 }

@@ -301,6 +301,7 @@
     <Content Include="Views\CSS3\4-MaintainableCSS\MaintainableCSS.cshtml" />
     <Content Include="Views\CSS3\5-GraphicsAndColorScheme\GraphicsAndColorScheme.cshtml" />
     <Content Include="Views\CSS3\6-DefineStyles\DefineStyles.cshtml" />
+    <Content Include="Views\CSS3\More.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\dalewilbanks.net.entities\dalewilbanks.net.entities.csproj">
