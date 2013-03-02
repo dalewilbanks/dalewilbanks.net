@@ -133,6 +133,7 @@
     <Content Include="Content\BackGround.jpg" />
     <Content Include="Content\images\DWilbanks.jpg" />
     <Content Include="Content\images\EditIcon.png" />
+    <Content Include="Content\images\ExpressionBlend_1.png" />
     <Content Include="Content\images\externalLink.png" />
     <Content Include="Content\images\WilbanksServer.JPG" />
     <Content Include="Content\mvc4Site.css" />

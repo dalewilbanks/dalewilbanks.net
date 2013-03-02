@@ -1,4 +1,4 @@
-﻿@import url("../Content/Reset.css");
+@import url("../Content/Reset.css");
 
 
 /*#region  Base Element Styling */
@@ -42,7 +42,7 @@ h3
 /*#endregion*/
 
 /*#region 2-Prototype Layout*/
-/*
+
 div, li
 {
    
@@ -94,7 +94,7 @@ ul.navigation li
 #resource
 {
     width: 25%;
-}*/
+}
 
 /* #endregion*/
 
@@ -109,7 +109,6 @@ header
 }
 
 
- 
 
 
 

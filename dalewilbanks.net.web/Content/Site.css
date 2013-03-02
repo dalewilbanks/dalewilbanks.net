@@ -55,7 +55,16 @@ ul > li
     font-weight: 500;
     cursor: pointer;
     margin-bottom: 1em;
+    color: #000;
 }
+
+.selectedLi
+{
+    color: rgb(18, 26, 204);
+    font-weight:bold;
+    font-size: 120%;
+}
+
 /* HEADINGS   
 ----------------------------------------------------------*/
 h1, h2, h3, h4, h5, h6 {

@@ -6,10 +6,27 @@
 <h2>Know your Tools</h2>
 
         <ul>
-            <li>Chrome Developer Tools</li>
+            <li>Chrome Developer Tools for CSS @Html.Partial("_externalLink", "https://developers.google.com/chrome-developer-tools/docs/elements-styles")</li>
                 <ul>
-                    <li>Inspect elemement</li>
-                    <li>:hover - Force Element State</li>
+                    <li>Inspect element</li>
+                    <li>Computed Styles - displays all applicable style attributes, and what is used to determine the style.</li>
+                    <li>Styles - displays all styles application to the current DOM node, grouped by ancestor element.
+                        <ul>
+                            <li>Auto suggest of style attributes</li>
+                            <li>Alter values with arrow keys, page up/down.</li>
+                            <li>Color picker</li>
+                            <li>Menu: new style, set element state, change color format</li>
+                            <li>Metrics Pane</li>
+                        </ul>
+                    </li>
+                    <li>Sources - review changes, save your CSS
+                        <ul>
+                            <li>Revision Nodes</li>
+                            <li>Drag to Editor</li>
+                            <li>Save to disk</li>
+                        </ul>
+                    </li>
+                    <li>Force Element State - force pseudo element state, ex. :hover</li>
                 </ul>
             <li>Visual Studio 2012 @Html.Partial("_externalLink", "http://www.asp.net/vnext/overview/visual-studio/visual-studio-2012-css-editor")</li>
                 <ul>
@@ -27,4 +44,8 @@
                     </li>
                 </ul>
             <li>Blend for Visual Studio</li>
+            <ul>
+                <li><a class="preview" style="text-decoration:none;" href="~/Content/images/ExpressionBlend_1.png" title="">Descriptive Intellisense</a>
+                </li>
+            </ul>
         </ul>
