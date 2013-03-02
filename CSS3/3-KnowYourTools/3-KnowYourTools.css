@@ -1,0 +1,120 @@
+﻿@import url("../Content/Reset.css");
+
+
+/*#region  Base Element Styling */
+
+body {
+    font-family: Lucidia Console, Lucida Sans Unicode, Verdana, Helvetica, Sans-Serif;
+
+}
+
+strong
+{
+    font-weight: bold;
+}
+
+p, div, h1, h2, h3
+{
+    margin: 3px 3px 3px 3px;
+    padding: 3px 3px 3px 3px;
+}
+
+h1, h2, h3
+{
+    display: block;
+    font-weight: bold;
+}
+
+h1
+{
+    font-size: 2em;
+}
+
+h2
+{
+    font-size: 1.5em;
+}
+
+h3
+{
+    font-size: 1.17em;
+}
+/*#endregion*/
+
+/*#region 2-Prototype Layout*/
+/*
+div, li
+{
+   
+    border-style:solid;
+    border-width: 2px;
+    border-color: #000000;
+    
+}
+
+
+ul.navigation li
+{
+    display: table-cell;
+    width: 15%;
+    vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+
+.container
+{
+    white-space: nowrap;
+    vertical-align: top;
+    padding: 5px;
+    min-height: 640px;
+    overflow: auto;
+}
+
+.column
+{
+   display: inline-block;
+    white-space: normal;
+    vertical-align: top;
+}
+
+#filter
+{
+    width: 20%;
+}
+
+#ideaMap
+{
+    width: 50%;
+}
+
+#resource
+{
+    width: 25%;
+}*/
+
+/* #endregion*/
+
+div
+{
+    transition
+}
+
+header
+{
+    color: #000;
+}
+
+
+ 
+
+
+
+
+
+
+
+
