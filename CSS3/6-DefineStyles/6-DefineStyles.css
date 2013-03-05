@@ -6,7 +6,10 @@
 body {
     font-family: Arial, sans-serif;
     color: rgb(48, 84, 158);
-
+    background: url("../Content/Images/hiveBackground.png") no-repeat scroll center top rgb(255,255,255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    padding: 10px 10px 10px 10px;
 }
 
 strong
@@ -100,11 +103,6 @@ ul.navigation li
 /* #endregion*/
 
 /*#region Navigation*/
-#siteNav
-{
-    border-style: none;
-}
-
 ul.navigation
 {
     margin: 3px;
@@ -168,9 +166,67 @@ ul.navigation img
 
 /*#endregion*/
 
+.hivePanel
+{
+    border-style: none;
+    border-radius: 6px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
 
+.noBorder
+{
+    border-style: none;
+}
 
+/*#region button */
+button, .button
+{
+    color: #30549E;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0,0,0, 0.1);
+    border-radius: 6px;
+    font-weight: bolder;
+    background-color: #FFFFFF;
+    padding: 5px 7px 5px 7px;
+    margin: 3px 3px 3px 3px;
+    height: 32px;
+    font-size: 0.8em !important;
+    text-decoration: none;
+    line-height: 15px;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.05, rgba(0, 0, 0, 0.05)), color-stop(.4, rgba(255, 255, 255, 0)));
+    background-image: -moz-linear-gradient(center bottom, rgba(0,0,0,0.3) 1%, rgba(255,255,255,0.2) 100%);
+    background-image: gradient(center bottom, rgba(0,0,0,0.3) 1%, rgba(255,255,255,0.2) 100%);
+}
+button[disabled], .button[disabled]
+{
+    color: #A0A0A0 !important;
+    font-size: 0.8em !important;
+}
+button:not([disabled]):hover, .button:not([disabled]):hover
+{
+    cursor: pointer;
+    color: #006FFA !important;
+    font-size: 0.8em !important;
+    border-style: none;
+    border-radius: 6px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
 
+button:not([disabled]):active, .button:not([disabled]):active
+{
+    border-style: none;
+    border-radius: 6px;
+    box-shadow: none;
+    background-color: #F9F9F9;
+}
+
+/*#endregion*/
 
 
 
