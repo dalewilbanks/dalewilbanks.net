@@ -3,7 +3,7 @@
 <head>
     <title>6-DefineStyles</title>
     <link rel="stylesheet"   href="6-DefineStyles.css" />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <script>
         $(document).ready(documentReady);
@@ -11,9 +11,11 @@
 
         function documentReady() {
    
-             $("li").click(function (event) {
+            $("ul.navigation li").click(function (event) {
                //event.stopPropagation();
-                 $(this).removeClass("navOff");
+                $("ul.navigation li").removeClass("navOn");
+                $("ul.navigation li").addClass("navOff");
+                $(this).removeClass("navOff");
                 $(this).addClass("navOn");
             });
         }
