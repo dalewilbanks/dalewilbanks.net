@@ -1,4 +1,4 @@
-﻿/*----------------------------------------------------------
+/*----------------------------------------------------------
 The base color for this template is #5c87b2. If you'd like
 to use a different color start by replacing all instances of
 #5c87b2 with your new color.
@@ -61,7 +61,7 @@ ul > li
 .selectedLi
 {
     color: rgb(18, 26, 204);
-    font-size: 120%;
+    font-size: 240%;
     border-width: thin;
 }
 
