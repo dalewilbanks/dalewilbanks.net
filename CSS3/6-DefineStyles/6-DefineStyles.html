@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>6-DefineStyles</title>
+    <link rel="stylesheet"   href="6-DefineStyles.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+    <!--script>
+        $(document).ready(documentReady);
+
+
+        function documentReady() {
+   
+             $("li").click(function (event) {
+                event.stopPropagation();
+                $("li").removeClass("navOff");
+                $(this).addClass("navOn");
+            });
+        }
+    </script-->
+</head>
+<body>
+
+  
+    
+<div id="siteNav">
+<ul class="navigation">
+        <li id="Hive" class="navOff"><img class="logo" src="../Content/Images/HiveLogo.png" alt="theHive"></li>
+        <li id="Buzz" class="navOff">the<strong>Buzz</strong></li>
+        <li id="IdeaMap" class="navOff">idea<strong>Map</strong></li>
+        <li id="SpecialistDirectory" class="navOff">specialist<strong>Directory</strong></li>
+        <li id="SocialNetwork" class="navOff">social<strong>Network</strong></li>
+        <li id="WhatIs" class="navOff">what is the<strong>Hive</strong></li>       
+</ul>
+</div>
+
+
+<div id="ideaMapContent" class="container">
+    <div id="history">history, history, history, history, history, history, history, history, history, history, history, history, history, history, </div>
+    <div id="filter" class="column">filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter,filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter,filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter,filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter,filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, filter, </div>
+    <div id="ideaMap" class="column">ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, ideaMap, </div>
+    <div id="resource" class="column">resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource, resource</div>
+</div>
+
+<div id="footerinfo">© 2013 The World Bank Group, All Rights Reserved. <a target="_wb" href="http://go.worldbank.org/OS6V7NIUD0">Legal</a></div>
+
+
+</body>
+</html>

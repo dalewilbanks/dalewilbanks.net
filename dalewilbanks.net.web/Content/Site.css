@@ -61,8 +61,8 @@ ul > li
 .selectedLi
 {
     color: rgb(18, 26, 204);
-    font-weight:bold;
     font-size: 120%;
+    border-width: thin;
 }
 
 /* HEADINGS   
@@ -385,5 +385,11 @@ li.css3
     position: relative;
     top: -2.5em;
     left: .75em;
+}
+
+.attribution
+{
+    font-size: 0.8em;
+    font-style: italic;
 }
 
