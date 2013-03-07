@@ -31,15 +31,17 @@ namespace dalewilbanks.net.web.Controllers
             return View("3-KnowYourTools/KnowYourTools");
         }
 
-        public ActionResult MaintainableCSS()
-        {
-            return View("4-MaintainableCSS/MaintainableCSS");
-        }
-
         public ActionResult GraphicsAndColorScheme()
         {
-            return View("5-GraphicsAndColorScheme/GraphicsAndColorScheme");
+            return View("4-GraphicsAndColorScheme/GraphicsAndColorScheme");
         }
+
+        public ActionResult MaintainableCSS()
+        {
+            return View("5-MaintainableCSS/MaintainableCSS");
+        }
+
+
 
         public ActionResult DefineStyles()
         {

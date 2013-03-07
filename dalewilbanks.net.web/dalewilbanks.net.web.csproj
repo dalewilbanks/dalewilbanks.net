@@ -289,7 +289,6 @@
     <Content Include="Views\Shared\_mvc4Layout.cshtml" />
     <Content Include="Views\Lambda\Lambda.cshtml" />
     <Content Include="Views\Canvas\Canvas.cshtml" />
-    <Content Include="Views\CSS3Animation\CSS3Animation.cshtml" />
     <Content Include="Views\ContentPage.cshtml">
       <SubType>Code</SubType>
     </Content>
@@ -299,8 +298,8 @@
     <Content Include="Views\CSS3\2-PrototypeLayout\PrototypeLayout.cshtml" />
     <Content Include="Views\CSS3\3-KnowYourTools\KnowYourTools.cshtml" />
     <Content Include="Views\CSS3\7-AdvancedCSS3Effects\AdvancedCSS3Effects.cshtml" />
-    <Content Include="Views\CSS3\4-MaintainableCSS\MaintainableCSS.cshtml" />
-    <Content Include="Views\CSS3\5-GraphicsAndColorScheme\GraphicsAndColorScheme.cshtml" />
+    <Content Include="Views\CSS3\5-MaintainableCSS\MaintainableCSS.cshtml" />
+    <Content Include="Views\CSS3\4-GraphicsAndColorScheme\GraphicsAndColorScheme.cshtml" />
     <Content Include="Views\CSS3\6-DefineStyles\DefineStyles.cshtml" />
     <Content Include="Views\CSS3\More.cshtml" />
   </ItemGroup>
