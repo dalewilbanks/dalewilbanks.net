@@ -1,12 +1,30 @@
 @import url("../Content/Reset.css");
 
+/*#region color defintions */
+/*
+Color Pallete:
+Yellow = #FCD108;
+Orange = #F38814;
+Brown = #AB5522;
+DarkBlue = #30549E;
+MediumBlue = #1F6DAF;
+LightBlue = #006FFA;
+Superlight Background Blue = #F4F7FF;
+HyperlinkBlue = #006FFA;
+White = #FFFFFF;
+Black = #000000;
+Grey = #A0A0A0;
+WarningYellow = #FFFF99;
+Grey2% = F9F9F9;  used for active button
+Greay1% = FCFCFC;  button background
+*/
+/*#endregion */
 
 /*#region  Base Element Styling */
 
 body {
-    font-family: Arial, sans-serif;
-    color: rgb(48, 84, 158);
-    background: url("../Content/Images/hiveBackground.png") no-repeat scroll center top rgb(255,255,255);
+    /*color: #30549E;
+    background: url("../Content/Images/hiveBackground.png") no-repeat scroll center top rgba(255,255,255, 1);*/
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     padding: 10px 10px 10px 10px;
@@ -52,7 +70,8 @@ div, li
    
     border-style:solid;
     border-width: 2px;
-    border-color: #000000;
+    border-color: rgba(0, 0, 0, 1);
+    /*border-color: rgba(0, 0, 0, .2);*/
     
 }
 
@@ -102,131 +121,9 @@ ul.navigation li
 
 /* #endregion*/
 
-/*#region Navigation*/
-ul.navigation
-{
-    margin: 3px;
-    padding: 0px; /* could not override user stylesheet on a padding-start setting, had to add here to get nav logo correctly postioned*/
-    display: table;
-    border-style: none;
-}
 
-ul.navigation li
-{
-    list-style: none;
-    display: table-cell;
-    width: 15%;
-    vertical-align: middle;
-    text-align: center;
-    white-space: nowrap;
-    padding-left: 1em;
-    padding-right: 1em;
-    border-style: none;
-}
 
-ul.navigation img
-{
-    height: 50px;
-}
 
-.navOn, .navOff
-{
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.navOff
-{
-    font-size: 1.0em;
-    text-decoration: none;
-}
-
-.navOn
-{
-    color: #F38814 !important;
-    font-size: 1.1em !important;
-    text-decoration: none !important;
-}
-
-.navOff:hover
-{
-    color: #006FFA;
-    border-style: none;
-    border-radius: 6px;
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
-}
-
-.navOff:active
-{
-    color: #006FFA;
-    border-style: none;
-    border-radius: 6px;
-    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
-}
-
-/*#endregion*/
-
-.hivePanel
-{
-    border-style: none;
-    border-radius: 6px;
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
-    padding: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-.noBorder
-{
-    border-style: none;
-}
-
-/*#region button */
-button, .button
-{
-    color: #30549E;
-    font-family: Arial, Helvetica, sans-serif;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgba(0,0,0, 0.1);
-    border-radius: 6px;
-    font-weight: bolder;
-    background-color: #FFFFFF;
-    padding: 5px 7px 5px 7px;
-    margin: 3px 3px 3px 3px;
-    height: 32px;
-    font-size: 0.8em !important;
-    text-decoration: none;
-    line-height: 15px;
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.05, rgba(0, 0, 0, 0.05)), color-stop(.4, rgba(255, 255, 255, 0)));
-    background-image: -moz-linear-gradient(center bottom, rgba(0,0,0,0.3) 1%, rgba(255,255,255,0.2) 100%);
-    background-image: gradient(center bottom, rgba(0,0,0,0.3) 1%, rgba(255,255,255,0.2) 100%);
-}
-button[disabled], .button[disabled]
-{
-    color: #A0A0A0 !important;
-    font-size: 0.8em !important;
-}
-button:not([disabled]):hover, .button:not([disabled]):hover
-{
-    cursor: pointer;
-    color: #006FFA !important;
-    font-size: 0.8em !important;
-    border-style: none;
-    border-radius: 6px;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-}
-
-button:not([disabled]):active, .button:not([disabled]):active
-{
-    border-style: none;
-    border-radius: 6px;
-    box-shadow: none;
-    background-color: #F9F9F9;
-}
-
-/*#endregion*/
 
 
 
