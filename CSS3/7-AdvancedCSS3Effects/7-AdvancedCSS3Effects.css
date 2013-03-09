@@ -154,6 +154,7 @@ ul.navigation img
     border-style: none;
     border-radius: 6px;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+    -webkit-transition: all 1s;
 }
 
 .navOff:active
@@ -162,6 +163,7 @@ ul.navigation img
     border-style: none;
     border-radius: 6px;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all .5s;
 }
 
 /*#endregion*/
@@ -170,6 +172,7 @@ ul.navigation img
 
 .hivePanel
 {
+    -webkit-transition: all 3s;
     border-style: none;
     border-radius: 6px;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
@@ -219,6 +222,7 @@ font-size: 0.8em;
 }
 
 .swarm_heading:hover {
+-webkit-transition: all 1s;
 border-radius: 6px;
 box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
 }
