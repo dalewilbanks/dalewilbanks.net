@@ -23,7 +23,7 @@ namespace dalewilbanks.net.wordpress
 
         public string Read(string title)
         {
-            string content = "<a target=\"_blank\" href=\"http://dalewilbanks.wordpress.com\"><img  id=\"editIcon\" src=\"/Content/images/editIcon.png\"/></a>";
+            string content = "<a target=\"_blank\" id=\"editIcon\" href=\"http://dalewilbanks.wordpress.com\" class=\"button\"><img src=\"/Content/images/editIcon.png\"/></a>";
             try
             {
                 //XDocument rssFeed = XDocument.Load(@"C:\websites\www.standrewsumc.com\RSS2.xml");
