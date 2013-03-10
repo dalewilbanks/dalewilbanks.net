@@ -64,18 +64,6 @@ h3
 /*#endregion*/
 
 /*#region 2-Prototype Layout*/
-
-div, li
-{
-   
-    border-style:solid;
-    border-width: 2px;
-    border-color: rgba(0, 0, 0, 1);
-    border-color: rgba(0, 0, 0, .2);
-    
-}
-
-
 ul.navigation li
 {
     display: table-cell;
@@ -103,20 +91,41 @@ ul.navigation li
     white-space: normal;
     vertical-align: top;
 }
+/* #endregion*/
 
-#filter
+/*#region 5-Maintainable CSS*/
+/*Organization is a matter of preference, there are no hard and fast rules.  Some suggestions...*/
+/* 1-You could move page specific layout rules like these, to the page, using the <style> tag.  */
+#filter { width: 20%; }
+#ideaMap { width: 50%; }
+#resource { width: 25%; }
+
+/* 2-You can separate layout and style, by putting all layout in one stylesheet, and all style in a separate one - Rob*/
+/* goes into the SiteLayout.css*/
+.column  
 {
-    width: 20%;
+    display: inline-block;
+    white-space: normal;
+    vertical-align: top;
+}
+/* goes into the SiteStyle.css*/
+.column 
+{
+    border-style:solid;
+    border-width: 2px;
+    border-color: rgba(0, 0, 0, .2);   
 }
 
-#ideaMap
+/* 3- You can define classes more broadly, rather than element specific. 
+    This limits repeativeness in CSS, but it requires applying them to each element in HTML*/
+.roundCorners
 {
-    width: 50%;
+      border-radius: 12px;
 }
 
-#resource
+.shadowed
 {
-    width: 25%;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* #endregion*/
