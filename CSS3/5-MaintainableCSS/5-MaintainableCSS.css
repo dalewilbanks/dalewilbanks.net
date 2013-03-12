@@ -118,7 +118,7 @@ ul.navigation li
 
 /* 3- You can define classes more broadly, rather than element specific. 
     This limits repeativeness in CSS, but it requires applying them to each element in HTML*/
-.roundCorners
+/*.roundCorners
 {
       border-radius: 12px;
 }
@@ -126,7 +126,7 @@ ul.navigation li
 .shadowed
 {
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
-}
+}*/
 
 /* #endregion*/
 
