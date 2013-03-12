@@ -304,6 +304,7 @@ body
     /*-webkit-animation: borderShadow .5s;*/
 }
 
+
 @-webkit-keyframes borderShadow
 {
     0%   {border-radius: 96px; box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.0); background-color:rgba(255,255,255,0);}
@@ -313,18 +314,31 @@ body
     100% {border-radius: 6px;box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4); background-color:rgba(255,255,255,1);}
 }
 
-@-webkit-keyframes rotate360
-{
-    0%   {-webkit-transform:rotate(0deg);}
-    25%  {-webkit-transform:rotate(90deg);}
-    50%  {-webkit-transform:rotate(180deg);}
-    75%  {-webkit-transform:rotate(270deg);}
-    100% {-webkit-transform:rotate(360deg);}
+
+/*#region image rotate, with only 1 keyframe*/
+
+/*.swarm_heading > img:hover {
+    -webkit-animation: rotate360 2s;
 }
 
-.swarm_heading > img:hover {
-    /*-webkit-animation: rotate360 .5s;*/
-}
+@-webkit-keyframes rotate360
+{
+    100% {-webkit-transform:rotate(360deg);}
+}*/
+
+/*#endregion*/
+
+
+
+
+/*#region grand finale*/
+
+/*.swarm { -webkit-animation: launch 3s; }
+@-webkit-keyframes launch { 0% {top: 200px; left:400px;}}*/
+ 
+
+/*#endregion*/
+
 
 /*#endregion*/
 
