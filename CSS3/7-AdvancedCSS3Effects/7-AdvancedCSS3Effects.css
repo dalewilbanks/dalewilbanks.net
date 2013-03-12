@@ -302,7 +302,6 @@ body
     /*-webkit-transform:rotate(-45deg);*/
     /*-webkit-transform:skew(10deg,10deg);*/
     /*-webkit-animation: borderShadow .5s;*/
-    /*-webkit-animation: rotate360 .5s;*/
 }
 
 @-webkit-keyframes borderShadow
