@@ -129,7 +129,7 @@ ul.navigation img
     height: 50px;
 }
 
-.navOn, .navOff
+/*.navOn, .navOff
 {
     cursor: pointer;
     font-weight: bold;
@@ -162,13 +162,12 @@ ul.navigation img
     border-style: none;
     border-radius: 6px;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
-}
+}*/
 
 /*#endregion*/
 
 /*#region hivePanel*/
-
-
+/*
     .hivePanel
 {
     border-style: none;
@@ -178,13 +177,11 @@ ul.navigation img
     margin-left: 5px;
     margin-right: 5px;
     background-color: rgba(255, 255, 255, 0.8);
-}
-
+}*/
 /*#endregion*/
 
 /*#region ideaMap*/
-
-.swarm {
+/*.swarm {
 display: inline-block;
 position: relative;
 }
@@ -224,14 +221,13 @@ font-size: 0.8em;
 .swarm_heading:hover {
 border-radius: 6px;
 box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
-}
-
+}*/
 /*#endregion*/
 
 
 /*#region button */
 
-button, .button
+/*button, .button
 {
     color: #30549E;
     font-family: Arial, Helvetica, sans-serif;
@@ -272,7 +268,7 @@ button:not([disabled]):active, .button:not([disabled]):active
     border-radius: 6px;
     box-shadow: none;
     background-color: #F9F9F9;
-}
+}*/
 
 /*#endregion*/
 
