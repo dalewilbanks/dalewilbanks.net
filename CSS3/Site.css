@@ -1,0 +1,436 @@
+/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+body
+{
+    font-size: .85em;
+    font-family: Lucidia Console, Lucida Sans Unicode, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    background-image: url('BackGround.jpg');
+
+    /*background:
+    -webkit-radial-gradient(black 15%, transparent 16%) 0 0,
+    -webkit-radial-gradient(black 15%, transparent 16%) 8px 8px,
+    -webkit-radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    -webkit-radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;*/
+}
+
+
+a:link {
+    color: #034af3;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #505abc;
+}
+
+a:hover {
+    color: #1d60ff;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #12eb87;
+}
+
+ol li{ margin-top: 7px; }
+
+ol > li
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+ul > li
+{
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 1em;
+    color: #000;
+}
+
+.selectedLi
+{
+    color: rgb(18, 26, 204);
+    font-size: 193%;
+    border-width: thin;
+    background-color: rgba(174, 25, 187, 0.5);
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+    color: #000;
+}
+
+h1, h2 {
+    font-size: 1.75em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+/* TABLES   
+----------------------------------------------------------*/
+table 
+{
+    border: 1px;
+}
+
+thead
+{
+    background-color: #99CCFF;
+    color: #000154; /*CSS3 properties*/
+}
+
+thead tr td:hover
+{
+   cursor:pointer;
+   text-decoration: underline;
+}
+
+td
+{
+    padding: 5px 10px 5px 10px;
+}
+
+tbody tr:hover
+{
+    background-color: #a6e2a6;
+    cursor:pointer;
+}
+
+tfoot tr
+{
+    background-color:#FFF; cursor:auto;
+}
+
+/* BUTTON   
+----------------------------------------------------------*/
+.button
+{
+    background-color: #CCCCCC;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #84bbf3;
+    display: inline-block;
+    padding: 6px 24px;
+    text-decoration: none;
+    cursor:pointer;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+#page {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    #header {
+        position: relative;
+        margin-bottom: 0;
+        color: #000;
+        padding: 0;
+    }
+
+    #main {
+        padding: 10px 30px 15px 30px;
+        background-color: #fff;
+        margin-bottom: 30px;
+    
+        /*CSS3 properties*/
+        border-radius: 4px 0 4px 4px;
+        -webkit-border-radius: 4px 0 4px 4px;
+        -moz-border-radius: 4px 0 4px 4px;
+    }
+
+    #footer
+{
+    padding: 20px 0 10px 0;
+    text-align: center;
+    line-height: normal;
+    margin: 0;
+    font-size: .9em;
+}
+
+/* Site Title 
+----------------------------------------------------------*/
+#header .site-title {
+    float: left;
+    font-weight: bold;
+    padding: 5px 0;
+    margin: 0;
+    color: #fff;
+    border: none;
+    line-height: 2em;
+    font-size: 24px;
+        
+    /*CSS3 properties*/
+    text-shadow: 1px 1px 2px #111;
+}
+
+.site-title A {cursor:pointer;}
+.site-title A:link {text-decoration: none; color: #fff;}
+.site-title A:visited {text-decoration: none; color: #fff;}
+.site-title A:active {text-decoration: none; color: #fff;}
+.site-title A:hover {text-decoration: underline; ; color: #fff;}
+
+/* Image Prevew 
+----------------------------------------------------------*/
+#preview{
+	position:absolute;
+	/*border:0px solid #ccc;
+	background:#333;*/
+	padding:5px;
+	display:none;
+	/*color:#fff;*/
+	}
+	
+/* Login Display  
+----------------------------------------------------------*/
+#login {
+    float: right;
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    color: #000;
+}
+
+    #login li {
+        margin: 0;
+        display: inline;
+        list-style: none;
+        padding-left: 5px;
+    }
+    
+    #login a:link, #login a:visited {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    #login a:hover
+    {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+/* Tab Menu   
+----------------------------------------------------------*/
+ul#menu {
+    clear: both;
+    /*border-bottom: 1px #5c87b2 solid;*/
+    padding: 0 0 0px;
+    position: relative;
+    top: 8px;
+    margin: 0;
+    text-align: left;
+}
+
+    ul#menu li {
+        display: inline;
+        list-style: none;
+
+    }
+
+        ul#menu li a
+{
+    padding: 5px 7px 5px 7px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    background-color: #99CCFF;
+    color: #000154; /*CSS3 properties*/
+    border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+}
+
+        ul#menu li a:hover {
+            background-color: #a6e2a6;
+            text-decoration: none;
+        }
+
+        ul#menu li a:active {
+            background-color: #a6e2a6;
+            text-decoration: none;
+        }
+
+        ul#menu li.selected a {
+            background-color: #FFF;
+        }
+        
+/* forms   
+----------------------------------------------------------*/
+fieldset {
+    margin: 1em 0;
+    padding: 1em;
+    border: 1px solid #CCC;
+}
+
+    fieldset legend {
+        font-size: 1.1em;
+        font-weight: bold;
+        padding: 2px 4px 8px 4px;
+    }
+    
+    fieldset ol {
+        padding: 0;
+        list-style: none;
+    }
+    
+        fieldset ol li {
+            padding-bottom: 5px;
+        }
+    
+    fieldset label {
+        display: block;
+    }
+    
+    fieldset label.checkbox {
+        display: inline;
+    }
+    
+    fieldset input[type="text"], input[type="password"] {
+        border: 1px solid #ccc;
+        color: #444;
+        width: 300px;
+    }
+
+    fieldset input[type="submit"] {
+        padding: 5px;
+    }
+    
+ /* Information and errors  
+----------------------------------------------------------*/  
+.message {
+    clear: both;
+    border: 1px solid;
+    margin: 10px 0px;
+    padding: 15px 15px;
+    
+    /*CSS3 properties*/
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    box-shadow: 2px 2px 5px #888;
+    -webkit-box-shadow: 2px 2px 5px #888;
+    -moz-box-shadow: 2px 2px 5px #888;
+}
+
+.info {
+    background: #bde5f8;
+    color: #00529b;
+}
+
+.error {
+    background: #ffe4e4;
+    color: #be3e16;
+}
+
+.success {
+    background: #dff2bf;
+    color: #4f8a10;
+}
+
+input[type="text"].error-field, input[type="password"].error-field { 
+    border: solid 1px #be3e16; 
+    background-color: #ffe4e4;
+}
+
+.validation-error {
+    display: inline;
+    color: #be3e16;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+    .validation-error:before {
+        content: "»";
+    }
+
+li.css3
+{
+    list-style-image: url('/images/CSS3_Small.png');
+}
+
+#editIcon
+{
+    display: block;
+    float: right;
+    position: relative;
+    top: -2.5em;
+    left: .75em;
+}
+
+.attribution
+{
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+button, .button
+{
+    color: #30549E;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0,0,0, 0.1);
+    border-radius: 6px;
+    font-weight: bolder;
+    background-color: #FFFFFF;
+    padding: 5px 7px 5px 7px;
+    margin: 3px 3px 3px 3px;
+    font-size: 0.8em !important;
+    text-decoration: none;
+    line-height: 15px;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.05, rgba(0, 0, 0, 0.05)), color-stop(.4, rgba(255, 255, 255, 0)));
+    background-image: -moz-linear-gradient(center bottom, rgba(0,0,0,0.3) 1%, rgba(255,255,255,0.2) 100%);
+    background-image: gradient(center bottom, rgba(0,0,0,0.3) 1%, rgba(255,255,255,0.2) 100%);
+}
+button[disabled], .button[disabled]
+{
+    color: #A0A0A0 !important;
+    font-size: 0.8em !important;
+}
+button:not([disabled]):hover, .button:not([disabled]):hover
+{
+    cursor: pointer;
+    color: #006FFA !important;
+    font-size: 0.8em !important;
+    border-style: none;
+    border-radius: 6px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+button:not([disabled]):active, .button:not([disabled]):active
+{
+    border-style: none;
+    border-radius: 6px;
+    box-shadow: none;
+    background-color: #F9F9F9;
+}
