@@ -60,7 +60,7 @@
         {
             selectTab();
             imagePreview();
-            $("li").click(function (event) {
+            $("li:not(ul#menu li)").click(function (event) {
                 event.stopPropagation();
                 $("li").removeClass("selectedLi");
                 $(this).addClass("selectedLi");
