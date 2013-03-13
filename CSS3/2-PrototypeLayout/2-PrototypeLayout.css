@@ -42,17 +42,17 @@ h3
 /*#endregion*/
 
 
-/*div, li
+div, li
 {
    
     border-style:solid;
     border-width: 2px;
     border-color: #000000;
     
-}*/
+}
 
 
-/*ul.navigation li
+ul.navigation li
 {
     display: table-cell;
     width: 15%;
@@ -61,26 +61,26 @@ h3
     white-space: nowrap;
     padding-left: 1em;
     padding-right: 1em;
-}*/
+}
 
 
-/*.container
+.container
 {
     white-space: nowrap;
     vertical-align: top;
     padding: 5px;
     min-height: 640px;
     overflow: auto;
-}*/
+}
 
-/*.column
+.column
 {
    display: inline-block;
     white-space: normal;
     vertical-align: top;
-}*/
+}
 
-/*#filter
+#filter
 {
     width: 20%;
 }
@@ -93,7 +93,7 @@ h3
 #resource
 {
     width: 25%;
-}*/
+}
 
 
 

@@ -296,7 +296,7 @@ body
 /*#region transitions, transfomrs and animations*/
 
 .swarm_heading:hover {
-    /*-webkit-transition: all 1s;*/
+    -webkit-transition: all 1s;
     /*-webkit-transform:scale(1.2);*/
     /*-webkit-transform:translate(20px,20px);*/
     /*-webkit-transform:rotate(-45deg);*/
@@ -317,14 +317,14 @@ body
 
 /*#region image rotate, with only 1 keyframe*/
 
-/*.swarm_heading > img:hover {
+.swarm_heading > img {
     -webkit-animation: rotate360 2s;
 }
 
 @-webkit-keyframes rotate360
 {
     100% {-webkit-transform:rotate(360deg);}
-}*/
+}
 
 /*#endregion*/
 
@@ -333,8 +333,8 @@ body
 
 /*#region grand finale*/
 
-/*.swarm { -webkit-animation: launch 3s; }
-@-webkit-keyframes launch { 0% {top: 200px; left:400px;}}*/
+.swarm { -webkit-animation: launch 3s; }
+@-webkit-keyframes launch { 0% {top: 200px; left:400px;}}
  
 
 /*#endregion*/
