@@ -296,11 +296,15 @@ body
 /*#region transitions, transfomrs and animations*/
 
 .swarm_heading:hover {
+    /*Demo :hover w/out any changes first*/
+
     /*-webkit-transition: all 1s;*/
+
     /*-webkit-transform:scale(1.2);*/
     /*-webkit-transform:translate(20px,20px);*/
     /*-webkit-transform:rotate(-45deg);*/
     /*-webkit-transform:skew(10deg,10deg);*/
+
     /*-webkit-animation: borderShadow .5s;*/
 }
 
