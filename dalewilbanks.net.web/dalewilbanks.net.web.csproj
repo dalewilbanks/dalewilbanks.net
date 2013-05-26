@@ -75,6 +75,7 @@
       <Private>True</Private>
       <HintPath>..\packages\AspNetWebPagesCore.2.0.10906.0\lib\net40\System.Web.Helpers.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\AspNetMvc.4.0.10906.0\lib\net40\System.Web.Mvc.dll</HintPath>
@@ -111,6 +112,7 @@
     <Compile Include="APIs\WorkItemController.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AngularJSController.cs" />
     <Compile Include="Controllers\AWSDemoController.cs" />
     <Compile Include="Controllers\BestPracticesController.cs" />
     <Compile Include="Controllers\CanvasController.cs" />
@@ -170,6 +172,7 @@
     <Content Include="Global.asax" />
     <Content Include="Images\CSS3_med.png" />
     <Content Include="Images\CSS3_small.png" />
+    <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\datatables\jquery.dataTables.js" />
     <Content Include="Scripts\imagepreview\imagepreview.js" />
     <Content Include="Scripts\jquery-1.6.2-vsdoc.js" />
@@ -279,6 +282,7 @@
     <Content Include="Views\BestPractices\DesignPatterns.cshtml" />
     <Content Include="Views\AWSDemo\AWSDemo.cshtml" />
     <Content Include="Views\About\About.cshtml" />
+    <Content Include="Views\AngularJS\AngularJS.cshtml" />
     <None Include="Views\BestPractices\IDesign_CSharp_Coding_Standard_2.32.pdf" />
     <Content Include="Views\BestPractices\Methodology.cshtml" />
     <Content Include="Views\BestPractices\Usability.cshtml" />
