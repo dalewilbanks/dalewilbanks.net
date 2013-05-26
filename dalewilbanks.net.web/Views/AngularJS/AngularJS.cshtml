@@ -5,11 +5,13 @@
 
 <h2>AngularJS</h2>
 
- <div ng-app>
-      <label>Name:</label>
-      <input type="text" ng-model="yourName" placeholder="Enter a name here">
-      <hr>
-      <h1>Hello {{yourName}}!</h1>
-     Test Test2
-    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js">
+    </script>
+    <script src="/Views/AngularJS/project.js"></script>
+    <script src="/Views/AngularJS/mongolab.js"></script>
 
+<div ng-app="project">
+    <h3>JavaScript Projects</h3>
+    <div ng-view></div>
+</div>

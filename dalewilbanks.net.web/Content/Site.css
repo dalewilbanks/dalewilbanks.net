@@ -435,3 +435,16 @@ button:not([disabled]):active, .button:not([disabled]):active
     box-shadow: none;
     background-color: #F9F9F9;
 }
+
+.icon-pencil
+{
+    display: inline-block;
+    text-decoration: inherit;
+    width: auto;
+    height: auto;
+    line-height: inherit;
+    vertical-align: baseline;
+    background-image: none;
+    background-position: 0% 0%;
+    background-repeat: repeat;
+}
