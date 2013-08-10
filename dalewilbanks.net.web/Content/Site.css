@@ -448,3 +448,27 @@ button:not([disabled]):active, .button:not([disabled]):active
     background-position: 0% 0%;
     background-repeat: repeat;
 }
+
+
+/* placed at the end of the .css file so that it overrides anything previous*/
+/* note that max-device-width, will look at device capabilities, not browser window, 
+    where as max-width looks at the browser window*/
+/* only screen, keeps this from apply to print devices*/
+@media only screen and (max-width: 660px) 
+{
+    ul#menu li
+    {
+        display: block;
+        margin-bottom: 0em;
+    }
+
+    ul#menu li a
+    {
+        line-height: 2.0em;
+        display: block;  /* causes the a tag to take up 100% width*/
+        margin-bottom: 1px;
+        text-align: center;
+    }
+}
+
+
